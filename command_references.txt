@@ -8,3 +8,11 @@ decompile docker images
 docker pull chenzj/dfimage
 alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm chenzj/dfimage"
 dfimage <IMAGE_ID> > Dockerfile
+
+
+ docker pull NAME:tag
+ docker tag NAME:tag myaccount/name:tag
+ docker login
+ yourname
+ password
+ docker push myaccount/name:tag
