@@ -1,0 +1,10 @@
+MATCH (s:{source_entity}),(t:{target}) where
+    s.source_entity_id = {source_entity_id} and
+    (s)-[:{relation_name}]-(t) return t
+    
+
+decompile docker images
+
+docker pull chenzj/dfimage
+alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm chenzj/dfimage"
+dfimage <IMAGE_ID> > Dockerfile
